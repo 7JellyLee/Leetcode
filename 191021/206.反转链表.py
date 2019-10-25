@@ -14,5 +14,5 @@ class Solution:
             r = p.next
             p.next = dummy
             p = r
-            
+
         return dummy
