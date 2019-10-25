@@ -1,5 +1,6 @@
 #Leetcode
-#206.反转一个单链表
+#206.反转链表
+#反转一个单链表
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
