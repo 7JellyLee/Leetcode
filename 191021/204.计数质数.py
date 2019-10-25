@@ -19,7 +19,7 @@ class Solution:
         list = [1] * n
         list[0] = list[1] = 0
 
-        
+
         for i in range(2,int(n ** 0.5) + 1):
             list[i*i : n : i] = [0] * len(list[i*i : n : i])
 
