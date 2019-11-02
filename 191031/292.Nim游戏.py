@@ -5,19 +5,11 @@
 
 
 #本题关键点
-# 1.使用二分查找算法的思想可以解决该题
-# 2.mid值的要注意不能使用(low + high )//2容易溢出
-# 3.mid  =  low + (high - low) // 2
+# 1.本题代码不难关键在于对题目的理解。
+# 2.如果堆中石头的数量 nn 不能被 44 整除，那么你总是可以赢得 Nim 游戏的胜利。
 class Solution:
-    def firstBadVersion(self, n):
-        low  = 1
-        high = n
+    def canWinNim(self, n: int) -> bool:
+        if n%4 != 0:
+            return True
 
-        while low < high :
-            mid  =  low + (high - low) // 2
-            if isBadVersion(mid):
-                high = mid
-            else:
-                low = mid + 1
-
-        return low
+        return False
