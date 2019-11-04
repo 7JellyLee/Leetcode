@@ -7,27 +7,16 @@
 #本题关键点
 #1
 
-class Solution:
-    def wordPattern(self, pattern: str, str: str) -> bool:
-        words = str.split(" ")
-        hash_p = {}
-        hash_w = {}
+class NumArray:
 
-        if len(words) != len(pattern):
-            return False
+    def __init__(self, nums: List[int]):
+        self.nums = nums
+        for i in range(len(self.nums)):
+            if i > 0:
+                self.nums[i] = self.nums[i]+self.nums[i-1]
 
-        for i,letter in enumerate(pattern):
-            if hash_p.get(letter):
-                if hash_p[letter] != words[i]:
-                    return  False
-            else:
-                hash_p[letter] = words[i]
-
-        for i, word in enumerate(words):
-            if hash_w.get(word):
-                if hash_w[word] != pattern[i]:
-                    return False
-            else:
-                hash_w[word] = pattern[i]
-
-        return True
+    def sumRange(self, i: int, j: int) -> int:
+        if i>0:
+            return self.nums[j]-self.nums[i-1]
+        else:
+            return self.nums[j]
