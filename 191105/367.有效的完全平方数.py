@@ -1,20 +1,12 @@
 #Leetcode
 #367.有效的完全平方数
-#原地修改输入数组，将输入的字符串反转过来
+#编写一个函数来判断整数是否是有效的完全平方数，不可以使用任何的库函数。
 
 #本题关键点
-#1. 本题使用双指针交换
+#1. 使用暴力求解
 class Solution:
-    def reverseString(self, s: List[str]) -> None:
-        l = len(s)
-        if l < 2:
-            return s
-
-        j = l - 1
-        i = 0
-
-        while i < j:
-            s[i], s[j] = s[j],s[i]
+    def isPerfectSquare(self, num: int) -> bool:
+        i = 1
+        while i * i < num :
             i += 1
-            j -= 1
-        return s
+         return i * i == num
