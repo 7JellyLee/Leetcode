@@ -5,4 +5,8 @@
 
 
 #本题关键点
-# 
+# 1 python 自带库函数sum求和
+# 2.位运算，要注意溢出的问题
+class Solution:
+    def getSum(self, a: int, b: int) -> int:
+        return sum([a,b])
