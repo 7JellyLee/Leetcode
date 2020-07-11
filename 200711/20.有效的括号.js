@@ -8,7 +8,7 @@
 // 2.JavaScript语言进栈.push出栈.pop   
 // 
 /**
- * @param {string} s
+ * @param {string} 
  * @return {boolean}
  */
 var isValid = function(s) {
