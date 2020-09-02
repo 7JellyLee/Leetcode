@@ -6,3 +6,14 @@
 class Solution:
     def multiply(self, A):
         # write code here
+
+        B =[1] * len(A) 
+
+        for i in range(1,len(B)):
+            B[i] = B[i - 1] * A[i - 1]
+
+        for i in range(len(A) - 2, -1 -1):
+            tmp *= A[i + 1]
+            B[i] = B[i] * tmp
+
+        return B
